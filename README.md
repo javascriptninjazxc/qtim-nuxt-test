@@ -1,8 +1,5 @@
 # Nuxt Minimal Starter
 
-# UI Kit
-По цветам не очень понятно, какой цвет условно primary, а какой условно warning. Поэтому на глаз запихал все;
-
 ## Setup
 
 Make sure to install dependencies:
@@ -72,5 +69,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
