@@ -1,6 +1,8 @@
 <template>
-  <div>
-      <h2 class="bg-primary">This is page</h2>
+  <div class="articles container">
+    <h1 class="page__title">
+      Articles
+    </h1>
   </div>
 </template>
 

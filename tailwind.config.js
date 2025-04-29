@@ -2,6 +2,10 @@
 export default {
   content: [],
   theme: {
+    container: {
+      center: true,
+      width: '76rem',
+    },
     extend: {
       colors: {
         primary: {
