@@ -1,0 +1,52 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+  css: ['@/app/style/index.scss'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
+  ],
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
+  imports: {
+    dirs: [
+      'shared/*',
+      'pages/*'
+    ],
+  },
+  dir: {
+    pages: 'app/routes',
+    layouts: 'app/layouts'
+  },
+  components: [
+    {
+      path: '~/shared',
+      pathPrefix: false,
+    },
+    {
+      path: '~/pages',
+      pathPrefix: false
+    },
+    {
+      path: '~/entities',
+      pathPrefix: false
+    },
+    {
+      path: '~/widgets',
+      pathPrefix: false,
+    },
+  ],
+  icon: {
+    customCollections: [
+      {
+        prefix: 'local',
+        dir: './app/icons'
+      },
+    ],
+  },
+})
