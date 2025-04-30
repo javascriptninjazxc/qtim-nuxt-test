@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
   ],
   devServer: {
     host: '0.0.0.0',

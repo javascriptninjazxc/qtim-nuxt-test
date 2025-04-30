@@ -2,10 +2,10 @@
   <nav class="header-nav">
     <ul class="header-nav__list">
       <li class="header-nav__item">
-        <router-link to="/works">Works</router-link>
+        <router-link to="/">Works</router-link>
       </li>
       <li class="header-nav__item">
-        <router-link to="/about">About</router-link>
+        <router-link to="/">About</router-link>
       </li>
     </ul>
   </nav>

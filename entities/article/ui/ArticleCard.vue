@@ -1,6 +1,6 @@
 <template>
-  <div class="article-card">
-    <div class="article-card__image bg-neutral-900">
+  <div @click="navigateTo(`/article/${article.id}`)" class="article-card">
+    <div class="article-card__image bg-neutral-100">
       <img :src="article.image" alt="article preview image">
     </div>
     <div class="article-card__content">

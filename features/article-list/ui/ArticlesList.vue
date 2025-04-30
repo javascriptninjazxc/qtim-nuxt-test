@@ -21,35 +21,40 @@
 </template>
 
 <script setup lang="ts">
-import {useArticlesList} from "~/features/article-list/model/useArticlesList";
 import type {IArticle} from "~/entities/article/model/article.type";
 import {usePagination} from "#shared/lib/usePagination";
+import {useArticleStore} from "~/entities/article/model/article.model";
 
-const articles: Ref<IArticle[]> = ref([]);
+const articleStore = useArticleStore();
+
+const articles = computed(() => {
+  return articleStore.articles;
+})
+
 const isLoading = ref(false)
 
 const { items, currentPage, pageSize, setPage, setItems, paginatedItems } = usePagination<IArticle>();
-const {fetchArticlesList} = useArticlesList();
 
 const fetchArticles = async () => {
   isLoading.value = true;
-
   try {
-    const response = await fetchArticlesList();
-
-    if(!response.data.value) return;
-
-    setItems(response.data.value);
-
-    articles.value = response.data.value;
+    await articleStore.fetchArticles();
   } catch(err) {
     console.error(err);
   } finally {
-    isLoading.value = false
+    isLoading.value = false;
   }
 }
 
 fetchArticles();
+
+watch(
+    () => articleStore.articles,
+    (newArticles) => {
+      setItems(newArticles);
+    },
+    { immediate: true }
+);
 </script>
 
 <style lang="scss" scoped>
