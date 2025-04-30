@@ -1,6 +1,8 @@
 <template>
   <div>
-
+      <h2>
+        Article page
+      </h2>
   </div>
 </template>
 

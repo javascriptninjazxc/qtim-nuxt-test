@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
 .header {
-  @apply py-9 px-10 flex items-center justify-between;
+  @apply py-9 px-10 flex items-center justify-between sticky top-0 bg-white z-10;
 
   &-content {
     @apply flex items-center gap-[5.68rem];

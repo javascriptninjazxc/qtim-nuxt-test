@@ -4,7 +4,10 @@ export default {
   theme: {
     container: {
       center: true,
-      width: '76rem',
+      screens: {
+        DEFAULT: '100%',
+        xl: '76rem',
+      },
     },
     extend: {
       colors: {
@@ -20,6 +23,7 @@ export default {
         },
         neutral: {
           100: '#F3F3F3',
+          300: '#E8E8E8',
           400: '#868686',
           900: '#232323',
           950: '#101010',

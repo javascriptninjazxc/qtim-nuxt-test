@@ -1,16 +1,15 @@
 import type {IArticle} from "~/entities/article/model/article.type";
 import baseFetch from "#shared/api/baseFetch";
 
-export function useArticlesList() {
-
-    const fetchArticlesList = () => {
-        return useAsyncData<IArticle[]>('posts', () => baseFetch('posts'), {
+export function useArticle() {
+    const fetchArticleById = (id: string) => {
+        return useAsyncData<IArticle[]>(`posts/${id}`, () => baseFetch('posts'), {
             server: true,
             immediate: true,
         })
     }
 
     return {
-        fetchArticlesList
+        fetchArticleById,
     }
 }

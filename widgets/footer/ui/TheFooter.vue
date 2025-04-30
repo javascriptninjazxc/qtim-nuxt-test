@@ -76,8 +76,7 @@
   @apply bg-primary-100 pt-32 px-8;
 
   &__container {
-    @apply mx-auto;
-    max-width: 76rem;
+    @apply mx-auto max-w-[76rem];
   }
 
   &__middle {
@@ -88,12 +87,11 @@
     }
 
     &--contacts {
-      @apply space-y-9;
-      margin-left: auto;
+      @apply space-y-9 ml-auto;
       transition: all ease-in-out 200ms;
 
       @media (min-width: 1280px) {
-        margin-left: 25%;
+        @apply ml-[25%];
       }
     }
   }
@@ -103,13 +101,12 @@
 
     &--go {
       @apply relative p-0 rounded-none rounded-tl-full rounded-tr-full;
-      @apply text-white text-4xl bg-neutral-900;
-      width: 200px;
-      height: calc(200px / 2);
+      @apply text-white text-4xl bg-neutral-900 w-[200px];
       transition: all ease-in-out 200ms;
+      height: calc(200px / 2);
 
       @media (min-width: 1280px) {
-        width: 358px;
+        @apply w-[358px];
         height: calc(358px / 2);
       }
 

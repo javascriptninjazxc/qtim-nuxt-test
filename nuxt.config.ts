@@ -16,7 +16,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       'shared/*',
-      'pages/*'
     ],
   },
   dir: {
@@ -27,10 +26,6 @@ export default defineNuxtConfig({
     {
       path: '~/shared',
       pathPrefix: false,
-    },
-    {
-      path: '~/pages',
-      pathPrefix: false
     },
     {
       path: '~/entities',

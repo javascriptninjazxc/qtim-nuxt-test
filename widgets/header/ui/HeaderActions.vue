@@ -2,7 +2,7 @@
   <div class="header-actions">
     <language-switcher />
 
-    <BaseButton>
+    <BaseButton class="button-primary">
       Let's Work
     </BaseButton>
   </div>

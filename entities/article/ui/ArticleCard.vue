@@ -1,6 +1,6 @@
 <template>
   <div class="article-card">
-    <div class="article-card__image">
+    <div class="article-card__image bg-neutral-900">
       <img :src="article.image" alt="article preview image">
     </div>
     <div class="article-card__content">
@@ -17,23 +17,19 @@
 <script setup lang="ts">
 import type {IArticle} from "../model/article.type";
 
-const props = defineProps<{
+defineProps<{
   article: IArticle;
 }>();
 </script>
 
 <style lang="scss" scoped>
 .article-card {
-  @apply relative text-xl;
-
-  width: 17.5rem;
+  @apply relative text-xl cursor-pointer w-[17.5rem];
   transition: transform 0.3s, z-index 0.3s;
 
   &__image {
     img {
-      object-fit: cover;
-      width: 17.5rem;
-      height: 17.5rem;
+      @apply object-cover w-[17.5rem] h-[17.5rem];
     }
   }
 
@@ -49,8 +45,7 @@ const props = defineProps<{
     @apply -translate-y-10 z-[1];
 
     .article-card__more {
-      @apply absolute block;
-      padding-top: 0.75rem;
+      @apply absolute block pt-[0.75rem];
     }
   }
 }
